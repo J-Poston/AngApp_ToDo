@@ -1,1 +1,18 @@
-<p>to-do works!</p>
+
+<div>
+    <h1>Add New Task</h1>
+</div>
+
+<hr>
+
+<div>
+    <h1>To Do List</h1>
+
+    <ul *ngFor="let task of ToDoList, index as i">
+        <li>{{task.task}} : {{task.completed}}</li>
+    </ul>
+
+</div>
+
+
+

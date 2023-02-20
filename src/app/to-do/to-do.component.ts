@@ -8,6 +8,9 @@ import { Todo } from './interfaces/Todo';
 })
 export class ToDoComponent {
 
+  addTask : string = "";
+  addCompleted : boolean = false;
+
   ToDoList : Todo[] = [
       {task:"Finish project!", completed:false},
       {task:"Go grocery shopping", completed:true},
