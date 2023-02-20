@@ -23,4 +23,8 @@ export class ToDoComponent {
     AddTask():void{
         this.ToDoList.push({task: this.taskName, completed:false});
     }
+
+    CompleteTask():void{
+      
+    }
   }

@@ -20,8 +20,9 @@
 
     <ul *ngFor="let task of ToDoList, index as i">
         
-        <li>{{task.task}} : {{task.completed}} 
-            <span *ngIf="!task.completed"> <button>Complete</button> </span>
+        <li>{{task.task}} 
+            <span *ngIf="!task.completed"> <button (click)="CompleteTask()">Complete</button> </span>
+            <span *ngIf="task.completed">: Done!</span>
         </li>
         
     </ul>
