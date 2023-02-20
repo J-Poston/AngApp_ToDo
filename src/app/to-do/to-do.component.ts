@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Todo } from './interfaces/Todo';
 
 @Component({
@@ -8,9 +8,8 @@ import { Todo } from './interfaces/Todo';
 })
 export class ToDoComponent {
 
-  addTask : string = "";
-  addCompleted : boolean = false;
-
+  @Input() taskName = "";
+  
   ToDoList : Todo[] = [
       {task:"Finish project!", completed:false},
       {task:"Go grocery shopping", completed:true},
@@ -20,4 +19,8 @@ export class ToDoComponent {
       {task:"Vacuum the house", completed:false},
       {task:"Fix broken thing", completed:false},
     ];
+
+    AddTask():void{
+        this.ToDoList.push({task: this.taskName, completed:false});
+    }
   }
